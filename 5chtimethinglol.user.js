@@ -6,7 +6,7 @@
 // @author       Chibiaoiro script powered by ChatGPT™︎
 // @match        https://*.5ch.net/*
 // @match        https://*.open2ch.net/*
-// @match        https://*.bbspink.net/*
+// @match        https://*.bbspink.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -22,7 +22,7 @@
     if (isFirstVisit || (currentTime - sessionStorage.getItem('lastExecutedTime')) > thirtySeconds) {
         // 現在のURLを取得します
         var currentUrl = window.location.href;
-
+//これで、一回アクセスしてもこのスクリプトは動かない=read.cgiのやつ(最新50)が使える。でも、３０秒経つと、また動くようになる(?)　まじでどう動いていたかわからん。ごめん。
         // URLの末尾に"/l50"があるか確認します
         if (currentUrl.endsWith("/l50")) {
             // "/l50"を削除して修正されたURLを作成します
